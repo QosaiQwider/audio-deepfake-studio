@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Audio Detection
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/detection.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="../index.html">
+
+                Audio Deepfake Studio
+
+            </a>
+            <div class="nav-links">
+
+                <a href="generate.html" class="voice-nav">
+                    Generate
+                </a>
+
+                <a href="detection.html" class="voice-nav">
+                    Detect
+                </a>
+
+                <a href="../index.html" class="home-nav">
+                    Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class="detection-section">
+
+        <div class="container">
+
+            <div class="detection-header">
+
+                <h1>
+
+                    Audio Deepfake Detection
+
+                </h1>
+
+                <p>
+
+                    Upload an audio file and let our model determine
+                    whether it is real or AI generated.
+
+                </p>
+
+                <div class="model-info">
+
+                    <span>
+
+                        Accuracy: 98.7%
+
+                    </span>
+
+                    <span>
+
+                        WAV Supported
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="detect-card">
+
+                <label for="audioFile" class="upload-box">
+
+                    <span id="fileName">
+
+                        Upload WAV File
+
+                    </span>
+
+                    <small>
+
+                        Click to browse
+
+                    </small>
+
+                </label>
+
+                <input type="file" id="audioFile" accept=".wav" hidden>
+
+                <button id="detectBtn" class="detect-btn">
+
+                    Detect Audio
+
+                </button>
+
+            </div>
+
+            <div id="resultCard" class="result-card" style="display:none;">
+
+                <h2>
+                    Detection Result
+                </h2>
+
+                <div id="predictionBadge" class="fake-badge">
+
+                    Waiting For Analysis
+
+                </div>
+
+                <div class="confidence-section">
+
+                    <h3>
+                        Confidence
+                    </h3>
+
+                    <div class="progress">
+
+                        <div id="confidenceBar" class="progress-bar" style="width:0%;">
+                        </div>
+
+                    </div>
+
+                    <p id="confidenceValue">
+
+                        --
+
+                    </p>
+
+                </div>
+
+                <div class="probabilities">
+
+                    <div class="prob-card">
+
+                        <h4>
+                            Real
+                        </h4>
+
+                        <span id="realScore">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <div class="prob-card">
+
+                        <h4>
+                            Fake
+                        </h4>
+
+                        <span id="fakeScore">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <audio id="previewAudio" controls class="w-100 mt-4">
+                </audio>
+
+                <div class="result-actions">
+
+                    <button id="clearDetection">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/detection.js"></script>
+
+</body>
+
+</html>
