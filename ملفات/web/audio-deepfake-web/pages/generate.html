@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generate Voice</title>
+    <link rel="stylesheet" href="../css/generate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/generate.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="../index.html">
+                Audio Deepfake Studio
+            </a>
+
+            <div class="d-flex gap-4">
+
+                <a href="#" id="davidBtn" class="voice-nav">David</a>
+
+                <a href="#" id="morganBtn" class="voice-nav">Morgan</a>
+
+                <a href="#" id="fatherBtn" class="voice-nav">Father</a>
+
+                <a href="#" id="jenniferBtn" class="voice-nav">Jennifer</a>
+
+                <a href="#" id="customBtn" class="voice-nav">
+                    Custom
+                </a>
+
+                <a href="../index.html" class="home-nav">
+                    Home
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="generate-section">
+
+        <div class="container">
+            <div id="celebritySection">
+                <div class="generate-card">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-2 text-center">
+
+                            <img id="voiceImage" src="../assets/images/david.jpg" class="voice-avatar">
+
+                            <h5 id="voiceTitle">
+                                David Attenborough
+                            </h5>
+
+                        </div>
+
+                        <div class="col-lg-8">
+
+                            <textarea id="inputText" class="form-control custom-textarea"
+                                placeholder="Enter text here..."></textarea>
+
+                        </div>
+
+                        <div class="col-lg-2 text-center">
+
+                            <button class="btn import-btn">
+
+                                Import Script
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-4">
+
+                        <button id="generateBtn" class="generate-btn">
+
+                            ▶ Generate Voice
+
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="customSection">
+
+                <div class="custom-upload-card">
+
+                    <h3>
+                        Upload Reference Audio
+                    </h3>
+
+                    <label for="referenceAudio" class="upload-box">
+
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+
+                        <span id="referenceFileName">
+                            Drop .wav or .mp3 here
+                        </span>
+
+                        <small>
+                            or click to browse
+                        </small>
+
+                    </label>
+
+                    <input type="file" id="referenceAudio" accept=".wav,.mp3" hidden>
+
+                    <textarea id="customText" class="form-control custom-textarea mt-4"
+                        placeholder="Enter text here..."></textarea>
+
+                    <div class="text-center mt-4">
+
+                        <button id="customGenerateBtn" class="generate-btn">
+                            ▶ Generate Voice
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Output -->
+
+            <div id="outputCard" class="output-card mt-5" style="display:none;">
+
+                <h4>
+                    Generated Audio
+                </h4>
+
+                <audio id="resultAudio" controls class="w-100 mt-3">
+                </audio>
+
+                <div class="mt-4 d-flex align-items-center gap-3">
+
+                    <button id="downloadBtn" class="btn btn-primary">
+                        Download
+                    </button>
+
+                    <button id="clearBtn" class="btn btn-danger">
+                        Clear
+                    </button>
+
+                    <div class="speed-wrapper">
+                        <button id="speedBtn" class="btn btn-outline-light">
+                            1x
+                        </button>
+
+                        <div id="speedMenu" class="speed-menu">
+                            <button data-speed="0.5">0.5x</button>
+                            <button data-speed="0.75">0.75x</button>
+                            <button data-speed="1">1x</button>
+                            <button data-speed="1.25">1.25x</button>
+                            <button data-speed="1.5">1.5x</button>
+                            <button data-speed="2">2x</button>
+                        </div>
+                    </div>
+
+                    <button id="detectBtn" class="btn btn-outline-light ms-auto">
+                        Detect Audio
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/generate.js"></script>
+
+</body>
+
+</html>
