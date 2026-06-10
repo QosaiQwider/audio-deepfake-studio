@@ -467,3 +467,11 @@ document.querySelectorAll("#speedMenu button")
                 "none";
         });
     });
+document
+    .getElementById("detectBtn")
+    ?.addEventListener("click", () => {
+
+        window.location.href =
+            "detection.html";
+
+    });
