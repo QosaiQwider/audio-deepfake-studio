@@ -1,5 +1,5 @@
 const API_URL =
-    "https://2d13-34-24-58-37.ngrok-free.app";
+    "https://63e5-34-126-188-34.ngrok-free.app";
 
 const voice =
     localStorage.getItem("selectedVoice")
