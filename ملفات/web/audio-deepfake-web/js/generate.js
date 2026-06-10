@@ -1,5 +1,5 @@
 const API_URL =
-    "https://audio-deepfake-studio-t1yj.vercel.app/";
+    "https://2d13-34-24-58-37.ngrok-free.app";
 
 const voice =
     localStorage.getItem("selectedVoice")
