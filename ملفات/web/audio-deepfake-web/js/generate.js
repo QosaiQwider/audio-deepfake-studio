@@ -21,21 +21,21 @@ function updateVoice(voice) {
         case "David Attenborough":
 
             img.src =
-                "../assets/images/david.jpg";
+                "../assets/images/David.jpg";
 
             break;
 
         case "Morgan Freeman":
 
             img.src =
-                "../assets/images/morgan.jpg";
+                "../assets/images/Morgan.jpg";
 
             break;
 
         case "Father Christmas":
 
             img.src =
-                "../assets/images/father.jpg";
+                "../assets/images/Father.jpg";
 
             break;
 
